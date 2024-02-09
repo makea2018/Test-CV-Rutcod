@@ -7,6 +7,7 @@
   <li><a href="#структура-проекта">Структура проекта</a></li>
   <li><a href="#результаты">Результаты</a></li>
   <li><a href="#запуск">Запуск</a></li>
+  <li><a href="#важная-информация">Важная информация</a></li>
 </ol>
 
 ## Задание
@@ -62,3 +63,16 @@
 </table>
 
 ## Запуск
+1. Клонировать репозиторий:
+```sh
+git clone https://github.com/makea2018/Test-CV-Rutcod.git
+```
+2. Перейти в папку проекта и установить все необходимые библиотеки:
+```sh
+pip install -r requirements.txt
+```
+3. Для быстрого запуска и тестирования модели открыть ноутбук [yolo_fast_usage.ipynb](./yolo_fast_usage.ipynb)
+
+## Важная информация
+1. Все изображения для проверки модели должны находиться в папке [Data/my_examples](./Data/my_examples/)
+2. Для воспроизведения кода работы моделей 'Tesseract' и 'EasyOCR' - раcкомментировать версии библиотек в файле [requirements.txt](requirements.txt), а также установить ядро Tesseract по [ссылке](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.3.20231005.exe) - установить в папку ../Tesseract-OCR
