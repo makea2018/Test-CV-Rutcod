@@ -1,4 +1,6 @@
-Data
+Data/train
+Data/test
+*.cache
 Tesseract-OCR
 YOLOv8_Tutorial.ipynb
 app.py
