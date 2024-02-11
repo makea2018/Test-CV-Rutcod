@@ -189,7 +189,22 @@ def main(page: ft.Page):
             # Обновляю страницу
             right_block.update()
 
-            #
+            # Делаем кнопку 'Сбросить' видимой
+            restart_btn.visible = True
+            main_body.update()
+
+    def restart(e):
+        left_block.container.content = CustomButton("Загрузить файл")
+        left_block.text.content.value = "Исходное изображение"
+        left_block.container.content.on_click = select_files
+        right_block.container.content = CustomButton("Предсказать", disable=True)
+        right_block.text.content.value = "Результат"
+        right_block.container.content.on_click = predict
+
+        restart_btn.visible = False
+        restart_btn.update()
+        left_block.update()
+        right_block.update()
 
 
     # ==================================================================
@@ -221,11 +236,19 @@ def main(page: ft.Page):
     file_picker = ft.FilePicker(on_result=on_dialog_result, on_upload=on_upload_progress)
     page.overlay.append(file_picker)
 
+
+    # Кнопка 'Сбросить' (Начать сначала)
+    restart_btn = CustomButton("Сбросить")
+    restart_btn.visible = False
+    restart_btn.on_click = restart
+
+
     # Поместим все виджеты в строку (друг за другом)
     main_body = ft.Container(
         content=ft.Row(
             controls=[
                 left_block,
+                restart_btn,
                 right_block
             ],
             alignment=ft.MainAxisAlignment.SPACE_AROUND
