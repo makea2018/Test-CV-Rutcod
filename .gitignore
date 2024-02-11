@@ -3,5 +3,6 @@ Data/test
 *.cache
 Tesseract-OCR
 YOLOv8_Tutorial.ipynb
-app.py
 .idea
+assets
+predict_script.py
