@@ -6,8 +6,8 @@
   <li><a href="#задание">Задание</a></li>
   <li><a href="#структура-проекта">Структура проекта</a></li>
   <li><a href="#результаты">Результаты</a></li>
-  <li><a href="#запуск">Запуск</a></li>
-  <li><a href="#важная-информация">Важная информация</a></li>
+  <li><a href="#запуск-в-jupyter-notebook">Запуск в Jupyter Notebook</a></li>
+  <li><a href="#запуск-ui">Запуск UI</a></li>
 </ol>
 
 ## Задание
@@ -99,7 +99,7 @@ pip install -r requirements.txt
 1. Все изображения для проверки модели должны находиться в папке [Data/my_examples](./Data/my_examples/)
 2. Для воспроизведения кода работы моделей 'Tesseract' и 'EasyOCR' - раcкомментировать версии библиотек в файле [requirements.txt](requirements.txt), а также установить ядро Tesseract по [ссылке](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.3.20231005.exe) - установить в папку ../Tesseract-OCR
 
-## ## Запуск UI
+## Запуск UI
 Возможно запустить проект в браузере и использовать модель через 'UI' - графический интерфейс пользователя. Интерфейс приложения написан на фреймворке 'Flet'. Версия библиотеки 'Flet' указана в файле [requirements.txt](./requirements.txt)
 
 **Инструкция:**
