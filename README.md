@@ -6,8 +6,8 @@
   <li><a href="#задание">Задание</a></li>
   <li><a href="#структура-проекта">Структура проекта</a></li>
   <li><a href="#результаты">Результаты</a></li>
-  <li><a href="#запуск">Запуск</a></li>
-  <li><a href="#важная-информация">Важная информация</a></li>
+  <li><a href="#запуск-в-jupyter-notebook">Запуск в Jupyter Notebook</a></li>
+  <li><a href="#запуск-ui">Запуск UI</a></li>
 </ol>
 
 ## Задание
@@ -20,6 +20,7 @@
 - runs/ - папка, в которой сохранены результаты обучения и тестирования модели;
 - weights/ - папка с весами оригинальной yolov8 n и дообученной модели yolov8;
 - .gitignore - файлы и папки, которые git игнорирует;
+- app.py - код UI приложения;
 - config.yaml - файл с конфигурацией для дообучения модели yolov8;
 - notebook.ipynb - Jupyter ноутбук, в котором представлен анализ данных, работа разных моделей, обучение и тестирование модели yolov8;
 - README.md - текстовый файл с описанием проекта;
@@ -43,6 +44,7 @@
     ├── best.pt
     ├── yolov8n.pt
 ├── .gitignore
+├── app.py
 ├── config.yaml
 ├── notebook.ipynb
 ├── README.md
@@ -82,7 +84,7 @@
 </table>
 
 
-## Запуск
+## Запуск в Jupyter Notebook
 1. Клонировать репозиторий:
 ```sh
 git clone https://github.com/makea2018/Test-CV-Rutcod.git
@@ -96,3 +98,24 @@ pip install -r requirements.txt
 ## Важная информация
 1. Все изображения для проверки модели должны находиться в папке [Data/my_examples](./Data/my_examples/)
 2. Для воспроизведения кода работы моделей 'Tesseract' и 'EasyOCR' - раcкомментировать версии библиотек в файле [requirements.txt](requirements.txt), а также установить ядро Tesseract по [ссылке](https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.3.20231005.exe) - установить в папку ../Tesseract-OCR
+
+## Запуск UI
+Возможно запустить проект в браузере и использовать модель через 'UI' - графический интерфейс пользователя. Интерфейс приложения написан на фреймворке 'Flet'. Версия библиотеки 'Flet' указана в файле [requirements.txt](./requirements.txt)
+
+**Инструкция:**
+1. Клонировать репозиторий:
+```sh
+git clone https://github.com/makea2018/Test-CV-Rutcod.git
+```
+2. Перейти в папку проекта и установить все необходимые библиотеки:
+```sh
+pip install -r requirements.txt
+```
+3. Запустить файл app.py командой:
+```sh
+python app.py
+```
+
+**Пример работы** приложения с UI представлен ниже:  
+  
+![пример работы ui](./Data/UI_example.png)
